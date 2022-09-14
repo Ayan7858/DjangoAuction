@@ -36,13 +36,13 @@
   <br><br>
   {% endif %}
   <a class="btn btn-success" href="{% url 'auctions:add_to' listing.id %}">Add to WatchList</a>
-  {% ifequal listing.user user %}
+  {% if listing.user == user %}
   <br><br>
   <a class="btn btn-danger" href="{% url 'auctions:close_listing' listing.id %}">Close Listing</a>
-  {% endifequal %}
+  {% endif %}
 </div>
 <hr>
-{% ifnotequal listing.user user %}
+{% if listing.user != user %}
 <h5>Bid </h5>
 <form class="login-form" action="{% url 'auctions:bid' %}" method="POST">
   {% csrf_token %}
@@ -59,7 +59,7 @@
 <div class="alert alert-info">
   Owner cannot bid on their own item.
 </div>
-{% endifnotequal %}
+{% endif %}
 <hr>
 <div class="listing-comments">
   <h5>Comments </h5>
