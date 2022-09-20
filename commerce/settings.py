@@ -122,5 +122,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # needed to store images from the image field in the model
-MEDIA_ROOT = os.path.join(BASE_DIR, 'auctions/uploads')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'auctions/uploads', 'auctions/static')
 MEDIA_URL = '/uploads/'
