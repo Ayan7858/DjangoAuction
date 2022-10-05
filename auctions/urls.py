@@ -19,4 +19,5 @@ urlpatterns = [
     path("addListing", views.addListing, name="add_listing"),
     path("user_listings", views.user_listings, name="user_listings"),
     path("close_listing/<int:listing_id>", views.close_listing, name="close_listing"),
+    path("template", views.template, name="template"),
 ]

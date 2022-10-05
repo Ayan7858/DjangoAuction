@@ -21,9 +21,12 @@ from . import settings
 from django.contrib.staticfiles.urls import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
+from django.views.generic import TemplateView
+
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", include("auctions.urls"))
+    path("", include("auctions.urls")),
+    path('', TemplateView.as_view(template_name='template.html')),
 ]
 
 # needed to display images from the models

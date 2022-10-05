@@ -1,16 +1,23 @@
+
 {% extends "auctions/layout.html" %}
 
+{% load static %}
+
 {% block body %}
-<section img style="max-width: 95%; margin: auto; width: 100%; min-height: 640px; display: flex; align-items: center; background-image: url('home.png'); background-repeat: no-repeat; background-size: cover; background-position: center left;" id="home">
+<!-- <section img style="max-width: 95%; margin: auto; width: 100%; min-height: 640px; display: flex; align-items: center; background-image:url(/static/home.png); background-repeat: no-repeat; background-size: cover; background-position: center left;" id="home">
   <div class="home-text">
       <h1>We Have Everything<br>Your <span>Car</span> Needs</h1>
       <p>Lorem ipsum dolor sit amet, consectetur <br> adipisicing elit. Laborum </p>
   </div>
+</section> -->
+
+
 </section>
-  <div class="add-listing-container">
-    <h2 class="blue-text margin-bot">
-      Active Listings
-    </h2>
+<div class="container" data-aos="fade-up">
+  
+  <div class="section-title">
+    <h2>Active Listings</h2>
+  </div>
     {% if user.is_authenticated %}
     <h5 title="add listing" class="plus-container">
       <a class="btn btn-outline-success plus-link" href="{% url 'auctions:add_listing' %}">+ Add new Listing</a>
@@ -67,9 +74,78 @@
       </div>
     </li>
     {% endfor %}
-    <li class="card card-header bg-info">
-      <div style="text-align: center; color: white;"> --- END --- </div>
-    </li>
-  </ul>
+    
   {% endif %}
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+  
+      
+  
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Arsha</h3>
+            <p>
+              A108 Adam Street <br>
+              New York, NY 535022<br>
+              United States <br><br>
+              <strong>Phone:</strong> +1 5589 55488 55<br>
+              <strong>Email:</strong> info@example.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Social Networks</h4>
+            <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom clearfix">
+      <div class="copyright">
+        <strong><span></span></strong>
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/ -->
+       <a href="https://bootstrapmade.com/"></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
 {% endblock %}

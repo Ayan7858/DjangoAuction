@@ -21,7 +21,7 @@ ul {
 
 #auction-title {
   text-align: center;
-  color: var(--primary);
+  color: rgba(40, 58, 90, 0.9);
   background-color: var(--light);
   border-radius: 5px;
 }
@@ -58,7 +58,7 @@ nav {
 }
 
 .blue-text {
-  color: var(--blue);
+  color: rgba(40, 58, 90, 0.9);
   width: max-content;
   padding-bottom: 5px;
   border-bottom: 2px solid var(--primary);
@@ -66,7 +66,7 @@ nav {
 }
 
 .category-title {
-  color: var(--indigo);
+  color: rgba(40, 58, 90, 0.9);
   margin: 0 auto;
   margin-bottom: 10px;
   border-color: var(--indigo);
@@ -155,7 +155,7 @@ nav .nav {
 
 .listing-form label {
   padding-right: 5px;
-  color: var(--primary);
+  color: rgba(40, 58, 90, 0.9);
   letter-spacing: 0.5px;
 }
 
@@ -218,7 +218,7 @@ nav .nav {
 }
 
 .listing-name {
-  color: var(--blue);
+  color: rgba(40, 58, 90, 0.9);
   text-align: center;
 }
 

@@ -14,6 +14,10 @@ from .decorators import Unauthenticated_user, Authenticated_user
 # dictionary variable to keep track of individual's watchlist
 watch_list = dict()
 
+def template(request):
+     return render(request, "auctions/template.html")
+
+
 def index(request):
     listings = []
     items = Listing.objects.filter(status="Pending")
