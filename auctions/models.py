@@ -30,7 +30,7 @@ class Listing(models.Model):
     created = models.DateField(auto_now_add = True)
 
     def __str__(self):
-        return f"{self.name} - starts at ${self.initial}"
+        return f"{self.name} - starts at ₹{self.initial}"
 
     # used to test in test.py
     def is_valid_listing(self):
@@ -44,7 +44,7 @@ class Bid(models.Model):
     added = models.DateTimeField(auto_now = True)
 
     def __str__(self):
-        return f"${self.highest_bid} - {self.user} on {self.listing.name}"
+        return f"₹{self.highest_bid} - {self.user} on {self.listing.name}"
 
 
 # stores the comments on the Listings

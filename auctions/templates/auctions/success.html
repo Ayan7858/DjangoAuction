@@ -1,3 +1,4 @@
+
 {% extends "auctions/layout.html" %}
 
 {% block title %}
@@ -13,7 +14,10 @@ Success
     <br>
     You have successfully won the bid for: <strong style="color: var(--gray)">{{ listing.name }}</strong>
     <br>
-    For the price of: <strong style="color: var(--warning)">${{ bid.highest_bid }}</strong>
+    For the price of: <strong style="color: var(--warning)">₹{{ bid.highest_bid }}</strong>
+    <br>
+    <br>
+    <button class="btn btn-primary">Send Email
   </div>
 </div>
 

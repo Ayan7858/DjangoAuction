@@ -22,7 +22,7 @@
 
 <div class="bid-info">
   {% if bid %}
-  Current Highest Bid: <strong style="color: var(--danger)">${{ bid.highest_bid }}</strong>
+  Current Highest Bid: <strong style="color: var(--danger)">₹{{ bid.highest_bid }}</strong>
   <br>
   By: <span style="color: var(--warning)">{{ bid.user }}</span>
   <div class="text-muted">Bid added at {{ bid.added }}</div>
@@ -32,7 +32,7 @@
     No Bids Currently Placed
   </span>
   <br>
-  Bids start from <strong style="color: var(--warning)">${{ listing.initial }}</strong>
+  Bids start from <strong style="color: var(--warning)">₹{{ listing.initial }}</strong>
   <br><br>
   {% endif %}
   <a class="btn btn-success" href="{% url 'auctions:add_to' listing.id %}">Add to WatchList</a>
@@ -48,12 +48,12 @@
   {% csrf_token %}
   <div class="input-group">
     <div class="input-group-prepend">
-      <div class="input-group-text bg-warning">$</div>
+      <div class="input-group-text bg-warning">₹</div>
     </div>
     <input class="form-control" type="number" min="1" name="bid" value="{{ default_bid }}" placeholder="Enter your bid here">
   </div>
   <input name="list_id" type="hidden" value="{{ listing.id }}" />
-  <a class="btn btn-primary" href="{% url 'auctions:add_to' listing.id %}" style="margin-top: 10px;" type="submit">Place Bid</a>
+  <button class="btn btn-primary" type="submit" style="margin-top: 10px;" >Place Bid</button>
 </form>
 {% else %}
 <div class="alert alert-info">

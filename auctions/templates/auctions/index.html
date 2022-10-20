@@ -19,12 +19,14 @@
     <h2>Active Listings</h2>
   </div>
     {% if user.is_authenticated %}
+    {% if user.username == "admin" %}
     <h5 title="add listing" class="plus-container">
       <a class="btn btn-outline-success plus-link" href="{% url 'auctions:add_listing' %}">+ Add new Listing</a>
       <a class="btn btn-outline-warning plus-link" href="{% url 'auctions:user_listings' %}">
         View Your Listings
       </a>
     </h5>
+    {% endif %}
     {% endif %}
   </div>
 
@@ -49,13 +51,13 @@
           {% endif %}
         </div>
         <div class="card-body" style="display: inline;">
-          <img align="left" alt="{{ list.listing.name }} - img" style="display: inline;" src="{{ list.listing.image.url }}" height="200" width="300"/>
+          <img align="left" alt="{{ list.listing.name }} - img" style="display: inline;" src="{{ list.listing.image.url }}" height="200" width=auto/>
           {% if list.bid != None %}
           <h5 align="center" class="list-cost" style="margin-top: 15px; display: inline; margin-left: 35px; color: var(--danger)">Bidding has started on this item</h5>
-          <h5 class="list-cost" style="display: inline; margin-left: 35px">Current Highest Bid: <strong style="display: inline; color: var(--warning)">${{ list.bid.highest_bid }}</strong></h5>
+          <h5 class="list-cost" style="display: inline; margin-left: 35px">Current Highest Bid: <strong style="display: inline; color: var(--warning)">₹{{ list.bid.highest_bid }}</strong></h5>
           {% else %}
           <h5 class="list-cost" style="display: inline; margin-left: 50px; color: var(--success)">No Bids Currently Placed</h5>
-          <h5 class="list-cost" style="display: inline; margin-left: 35px;">Bid Starts From: <strong>${{ list.listing.initial }}</strong> </h5>
+          <h5 class="list-cost" style="display: inline; margin-left: 35px;">Bid Starts From: <strong>₹{{ list.listing.initial }}</strong> </h5>
           {% endif %}
           <h5 style="margin-top: 50px;"> Category: <strong style="color: var(--gray)">{{ list.listing.category }}</strong> </h5>
           {% if user.is_authenticated %}

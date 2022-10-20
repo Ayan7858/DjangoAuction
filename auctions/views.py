@@ -1,9 +1,11 @@
+import email
 from django.contrib.auth import authenticate, login, logout
 from django.db import IntegrityError
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.contrib import messages
+from django.core.mail import send_mail
 
 from decimal import *
 
@@ -226,6 +228,13 @@ def categories(request):
 
 @Authenticated_user
 def success(request):
+    send_mail(
+    'Congratulations on winning the auction!',
+    'Hello',
+    'carpoint26@gmail.com',
+    ['ayanmaghrabi@gmail.com'],
+    fail_silently=False,
+)
     return render(request, "auctions/success.html")
 
 @Authenticated_user
