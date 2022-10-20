@@ -1,639 +1,639 @@
-{% extends "auctions/layout.html" %}
-
-{% load static %}
-
-{% block body %}
+{% extends "auctions/layout.html" %} {% load static %} {% block body %}
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+    <meta content="" name="description">
+    <meta content="" name="keywords">
 
-  <!-- Favicons -->
-  <link href=url(/static/img/favicon.png) rel="icon">
-  <link href=url(/static/img/apple-touch-icon.png) rel="apple-touch-icon">
+    <!-- Favicons -->
+    <!-- <link href=url(/static/img/favicon.png) rel="icon">
+    <link href=url(/static/img/apple-touch-icon.png) rel="apple-touch-icon"> -->
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" >
 
-  <!-- Vendor CSS Files -->
-  <link href="{% static 'vendor/aos/aos.css' %}">
-  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
-  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}">
-  <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}">
-  <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}">
-  <link href="{% static 'vendor/remixicon/remixicon.css' %}">
-  <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="{% static 'vendor/aos/aos.css' %}">
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
+    <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}">
+    <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}">
+    <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}">
+    <link href="{% static 'vendor/remixicon/remixicon.css' %}">
+    <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}">
 
-  <!-- Template Main CSS File -->
-  <link href="{% static 'css/style.css' %}">
-  <base href="/">
+    <!-- Template Main CSS File -->
+    <link href="{% static 'css/style.css' %}">
+    <base href="/">
+    <link href="{% static 'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' %}">
 
-  <!-- =======================================================
+
+    <!-- =======================================================
 
   ======================================================== -->
 </head>
+
 <body>
 
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex align-items-center">
 
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-            <h1>Dream It,<br>Drive It</h1>
-            <h2>A place for your automotive dreams and a place you can trust</h2>
-            <div class="d-flex justify-content-center justify-content-lg-start">
-              <!-- <a href="#about" class="btn-get-started scrollto">Get Started</a> -->
-              <!-- <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Video</span></a> -->
-            </div>
-          </div>
-          <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-            <img src="{% static 'img/auction.png' %}" class="img-fluid animated" alt="">
-          </div>
-        </div>
-      </div>
-  
-    </section><!-- End Hero -->
-  
-    <main id="main">
-  
-      <!-- ======= Clients Section ======= -->
-      <section id="clients" class="clients section-bg">
         <div class="container">
-  
-          <div class="row" data-aos="zoom-in">
-  
-            <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-              <img src="{% static 'img/clients/citi.png' %}" class="img-fluid" alt="">
+            <div class="row">
+                <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+                    <h1>Dream It,<br>Drive It</h1>
+                    <h2>A place for your automotive dreams and a place you can trust</h2>
+                    <div class="d-flex justify-content-center justify-content-lg-start">
+                        <!-- <a href="#about" class="btn-get-started scrollto">Get Started</a> -->
+                        <!-- <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Video</span></a> -->
+                    </div>
+                </div>
+                <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="{% static 'img/auction.png' %}" class="img-fluid animated" alt="">
+                </div>
             </div>
-  
-            <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-              <img src="{% static 'img/clients/discover.png' %}" class="img-fluid" alt="">
-            </div>
-  
-            <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-              <img src="{% static 'img/clients/visa.png' %}" class="img-fluid" alt="">
-            </div>
-  
-            <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-              <img src="{% static 'img/clients/hsbc.png' %}" class="img-fluid" alt="">
-            </div>
-  
-            <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-              <img src="{% static 'img/clients/western-union.png' %}" class="img-fluid" alt="">
-            </div>
-  
-            <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-              <img src="{% static 'img/clients/standard-chartered.png' %}" class="img-fluid" alt="">
-            </div>
-  
-          </div>
-  
         </div>
-      </section><!-- End Cliens Section -->
-  
-      <!-- ======= About Us Section ======= -->
-      <section id="about" class="about">
-        <div class="container" data-aos="fade-up">
-  
-          <div class="section-title">
-            <h2>About Us</h2>
-          </div>
-  
-          <div class="row content">
-            <div class="col-lg-6">
-              <p>
-                Operating in 22 countries,we offer a wide range of high-quality used vehicles, cross-border buying options and transportation, as well as providing a range of remarketing services for our growing network of trusted third parties.
-              </p>
-              
+
+    </section>
+    <!-- End Hero -->
+
+    <main id="main">
+
+        <!-- ======= Clients Section ======= -->
+        <section id="clients" class="clients section-bg">
+            <div class="container">
+
+                <div class="row" data-aos="zoom-in">
+
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'img/clients/citi.png' %}" class="img-fluid" alt="">
+                    </div>
+
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'img/clients/discover.png' %}" class="img-fluid" alt="">
+                    </div>
+
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'img/clients/visa.png' %}" class="img-fluid" alt="">
+                    </div>
+
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'img/clients/hsbc.png' %}" class="img-fluid" alt="">
+                    </div>
+
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'img/clients/western-union.png' %}" class="img-fluid" alt="">
+                    </div>
+
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'img/clients/standard-chartered.png' %}" class="img-fluid" alt="">
+                    </div>
+
+                </div>
+
             </div>
-            <div class="col-lg-6 pt-4 pt-lg-0">
-              <p>
-                We sell high-quality second-hand vehicles exclusively and directly to car dealers and traders.  All cars come with quality car descriptions and inspections. Start to buy cars today!
-              </p>
-              <a href="#" class="btn-learn-more">Learn More</a>
+        </section>
+        <!-- End Clients Section -->
+
+        <!-- ======= About Us Section ======= -->
+        <section id="about" class="about">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>About Us</h2>
+                </div>
+
+                <div class="row content">
+                    <div class="col-lg-6">
+                        <p>
+                            Operating in 22 countries,we offer a wide range of high-quality used vehicles, cross-border buying options and transportation, as well as providing a range of remarketing services for our growing network of trusted third parties.
+                        </p>
+
+                    </div>
+                    <div class="col-lg-6 pt-4 pt-lg-0">
+                        <p>
+                            We sell high-quality second-hand vehicles exclusively and directly to car dealers and traders. All cars come with quality car descriptions and inspections. Start to buy cars today!
+                        </p>
+                        <a href="#" class="btn-learn-more">Learn More</a>
+                    </div>
+                </div>
+
             </div>
-          </div>
-  
-        </div>
-      </section><!-- End About Us Section -->
-  
-      <!-- ======= Why Us Section ======= -->
-      <section id="why-us" class="why-us section-bg">
-        <div class="container-fluid" data-aos="fade-up">
-  
-          <div class="row">
-  
-            <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
-  
-              <div class="content">
-                <h3>Why <strong>US!!</strong></h3>
-                <p>
-                  Come join us in our journey to growth and betterment
-                </p>
-              </div>
-  
-              <div class="accordion-list">
-                <ul>
-                  <li>
-                    <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1"><span>01</span> INTREGITY <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                    <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
-                      <p>
-                        Our first principal is honesty, which helps us meet the expectations we create.
-                      </p>
+        </section>
+        <!-- End About Us Section -->
+
+        <!-- ======= Why Us Section ======= -->
+        <section id="why-us" class="why-us section-bg">
+            <div class="container-fluid" data-aos="fade-up">
+
+                <div class="row">
+
+                    <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
+
+                        <div class="content">
+                            <h3>Why <strong>US!!</strong></h3>
+                            <p>
+                                Come join us in our journey to growth and betterment
+                            </p>
+                        </div>
+
+                        <div class="accordion-list">
+                            <ul>
+                                <li>
+                                    <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1"><span>01</span> INTREGITY <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                    <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
+                                        <p>
+                                            Our first principal is honesty, which helps us meet the expectations we create.
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed"><span>02</span> COMMITMENT <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                    <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
+                                        <p>
+                                            Our commitment to our work and our clients is an unbreakable bond.
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed"><span>03</span> PASSION <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                                    <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
+                                        <p>
+                                            Passion drives us to perform better, progress continually and deliver timely.
+                                        </p>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+
                     </div>
-                  </li>
-  
-                  <li>
-                    <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed"><span>02</span> COMMITMENT <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                    <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
-                      <p>
-                        Our commitment to our work and our clients is an unbreakable bond.
-                      </p>
-                    </div>
-                  </li>
-  
-                  <li>
-                    <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed"><span>03</span> PASSION <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                    <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
-                      <p>
-                        Passion drives us to perform better, progress continually and deliver timely.
-                                            </p>
-                    </div>
-                  </li>
-  
+
+                    <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url(static/img/about.png);' data-aos="zoom-in" data-aos-delay="150">&nbsp;</div>
+                </div>
+
+            </div>
+        </section>
+        <!-- End Why Us Section -->
+
+        <!-- ======= Portfolio Section ======= -->
+        <section id="portfolio" class="portfolio">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>Cars Type</h2>
+                    <p>Today, India’s car market offers a world of choice. Hatchbacks, sedans, SUVs, MUVs, coupes, convertibles, pickup trucks – you name it, we have it. But choosing the right car from so many shapes, sizes and designs, can be a tad bewildering.</p>
+                </div>
+
+                <ul id="portfolio-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+                    <li data-filter="*" class="filter-active">All</li>
+                    <li data-filter=".filter-app">Sedan</li>
+                    <li data-filter=".filter-card">Hatchback</li>
+                    <li data-filter=".filter-web">SUV</li>
                 </ul>
-              </div>
-  
-            </div>
-  
-            <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url(static/img/about.png);' data-aos="zoom-in" data-aos-delay="150">&nbsp;</div>
-          </div>
-  
-        </div>
-      </section><!-- End Why Us Section -->
-  
-      <!-- ======= Skills Section ======= -->
-      <section id="skills" class="skills">
-        <div class="container" data-aos="fade-up">
-  
-          <div class="row">
-            <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
-              <img src= "{% static 'img/skills.png' %}" class="img-fluid" alt="">
-            </div>
-            <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
-              <h3>Customer Reviews</h3>
-              <p class="fst-italic">
-                Thousands of Indian car owners have told us what’s good and bad about their cars. Our user reviews and ratings are like having complete information about a car at your fingertips.
-              </p>
-  
-              <div class="skills-content">
-  
-                <div class="progress">
-                  <span class="skill">Value for Money <i class="val">91%</i></span>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="91" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
+
+                <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                        <div class="portfolio-img"><img src="{% static 'img/portfolio/sedan1.jpeg' %}" class="img-fluid" alt=""></div>
+                        <div class="portfolio-info">
+                            <h4>SEDAN</h4>
+                            <a href="{% static 'img/portfolio/sedan1.jpeg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+                            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                        <div class="portfolio-img"><img src="{% static 'img/portfolio/SUV1.webp' %}" class="img-fluid" alt=""></div>
+                        <div class="portfolio-info">
+                            <h4>SUV</h4>
+
+                            <a href="{% static 'img/portfolio/SUV1.webp' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+                            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                        <div class="portfolio-img"><img src="{% static 'img/portfolio/sedan2.jpeg' %}" class="img-fluid" alt=""></div>
+                        <div class="portfolio-info">
+                            <h4>SEDAN</h4>
+
+                            <a href="{% static 'img/portfolio/sedan2.jpeg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
+                            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                        <div class="portfolio-img"><img src="{% static 'img/portfolio/hatchback1.jpeg' %}" class="img-fluid" alt=""></div>
+                        <div class="portfolio-info">
+                            <h4>HATCHBACK</h4>
+
+                            <a href="{% static 'img/portfolio/hatchback1.jpeg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
+                            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                        <div class="portfolio-img"><img src="{% static 'img/portfolio/SUV2.jpeg' %}" class="img-fluid" alt=""></div>
+                        <div class="portfolio-info">
+                            <h4>SUV</h4>
+
+                            <a href="{% static 'img/portfolio/portfolio-5.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
+                            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                        <div class="portfolio-img"><img src="{% static 'img/portfolio/sedan3.webp' %}" class="img-fluid" alt=""></div>
+                        <div class="portfolio-info">
+                            <h4>SEDAN</h4>
+
+                            <a href="{% static 'img/portfolio/sedan3.webp' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
+                            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                        <div class="portfolio-img"><img src="{% static 'img/portfolio/hatchback2.jpeg' %}" class="img-fluid" alt=""></div>
+                        <div class="portfolio-info">
+                            <h4>HATCHBACK</h4>
+
+                            <a href="{% static 'img/portfolio/hatchback2.jpeg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
+                            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                        <div class="portfolio-img"><img src="{% static 'img/portfolio/hatchback3.avif' %}" class="img-fluid" alt=""></div>
+                        <div class="portfolio-info">
+                            <h4>HATCHBACK</h4>
+
+                            <a href="{% static 'img/portfolio/hatchback3.avif' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
+                            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                        <div class="portfolio-img"><img src="{% static 'img/portfolio/SUV3.webp' %}" class="img-fluid" alt=""></div>
+                        <div class="portfolio-info">
+                            <h4>SUV</h4>
+
+                            <a href="{% static 'img/portfolio/SUV3.webp' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+                            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+
                 </div>
-  
-                <div class="progress">
-                  <span class="skill">Sustainability <i class="val">90%</i></span>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
+
+            </div>
+        </section>
+        <!-- End Portfolio Section -->
+
+        <!-- ======= Skills Section ======= -->
+        <section id="skills" class="skills">
+            <div class="container" data-aos="fade-up">
+
+                <div class="row">
+                    <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
+                        <img src="{% static 'img/skills.png' %}" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
+                        <h3>Customer Reviews</h3>
+                        <p class="fst-italic">
+                            Thousands of Indian car owners have told us what’s good and bad about their cars. Our user reviews and ratings are like having complete information about a car at your fingertips.
+                        </p>
+
+                        <div class="skills-content">
+
+                            <div class="progress">
+                                <span class="skill">Value for Money <i class="val">91%</i></span>
+                                <div class="progress-bar-wrap">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="91" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+
+                            <div class="progress">
+                                <span class="skill">Sustainability <i class="val">90%</i></span>
+                                <div class="progress-bar-wrap">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+
+                            <div class="progress">
+                                <span class="skill">Customer Service <i class="val">94%</i></span>
+                                <div class="progress-bar-wrap">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="94" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+
+                            <div class="progress">
+                                <span class="skill">Reliablilty <i class="val">97%</i></span>
+                                <div class="progress-bar-wrap">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="97" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
                 </div>
-  
-                <div class="progress">
-                  <span class="skill">Design <i class="val">75%</i></span>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
+
+            </div>
+        </section>
+        <!-- End Skills Section -->
+
+        <!-- ======= Team Section ======= -->
+        <section id="team" class="team section-bg">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>Team</h2>
+                    <p>“We are not a team because we work together. We are a team because we respect, trust and care for each other.”</p>
                 </div>
-  
-                <div class="progress">
-                  <span class="skill">Photoshop <i class="val">55%</i></span>
-                  <div class="progress-bar-wrap">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
+
+                <div class="row">
+
+                    <div class="col-lg-6">
+                        <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="pic"><img src="{% static 'img/team/Glen.jpeg' %}" class="img-fluid" alt=""></div>
+                            <div class="member-info">
+                                <h4>Glen Gonsalves</h4>
+                                <span>Back-End Developer</span>
+                                <p>Knowledge and interest in computer systems and the latest technologies</p>
+                                <div class="social">
+                                    <a href="https://www.linkedin.com/"><img src="{% static 'img/social-mediaLogo/linkedin-square-logo-24.png' %}" alt="logo"></a>
+                                    <a href="https://www.instagram.com/glengonsalves21//"><img src="{% static 'img/social-mediaLogo/instagram-alt-logo-24.png' %}" alt="logo"></a>
+                                    <a href="https://www.facebook.com/"><img src="{% static 'img/social-mediaLogo/facebook-circle-logo-24.png' %}" alt="logo"></a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 mt-4 mt-lg-0">
+                        <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="pic"><img src="{% static 'img/team/ahmed.jpeg' %}" class="img-fluid" alt=""></div>
+                            <div class="member-info">
+                                <h4>Ahmed Husain Maghrabi</h4>
+                                <span>Back-End Developer</span>
+                                <p>Attention to detail and desire to probe further into data</p>
+                                <div class="social">
+                                    <a href="https://www.linkedin.com/"><img src="{% static 'img/social-mediaLogo/linkedin-square-logo-24.png' %}" alt="logo"></a>
+                                    <a href="https://www.instagram.com/glengonsalves21//"><img src="{% static 'img/social-mediaLogo/instagram-alt-logo-24.png' %}" alt="logo"></a>
+                                    <a href="https://www.facebook.com/"><img src="{% static 'img/social-mediaLogo/facebook-circle-logo-24.png' %}" alt="logo"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 mt-4">
+                        <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="pic"><img src="{% static 'img/team/rejith.jpeg' %}" class="img-fluid" alt=""></div>
+                            <div class="member-info">
+                                <h4>Rejith Jacob</h4>
+                                <span>UI/UX Designer & Documentation</span>
+                                <p>Illustrate design ideas using storyboards, process flows and sitemaps</p>
+                                <div class="social">
+                                    <a href="https://www.linkedin.com/"><img src="{% static 'img/social-mediaLogo/linkedin-square-logo-24.png' %}" alt="logo"></a>
+                                    <a href="https://www.instagram.com/glengonsalves21//"><img src="{% static 'img/social-mediaLogo/instagram-alt-logo-24.png' %}" alt="logo"></a>
+                                    <a href="https://www.facebook.com/"><img src="{% static 'img/social-mediaLogo/facebook-circle-logo-24.png' %}" alt="logo"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 mt-4">
+                        <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="pic"><img src="{% static 'img/team/chrissy.png' %}" class="img-fluid" alt=""></div>
+                            <div class="member-info">
+                                <h4>Chrisanne Rebello</h4>
+                                <span>UI/UX Designer & Documentation</span>
+                                <p>Develop UI mockups and prototypes that clearly illustrate how sites function and look like</p>
+                                <div class="social">
+                                    <a href="https://www.linkedin.com/"><img src="{% static 'img/social-mediaLogo/linkedin-square-logo-24.png' %}" alt="logo"></a>
+                                    <a href="https://www.instagram.com/glengonsalves21//"><img src="{% static 'img/social-mediaLogo/instagram-alt-logo-24.png' %}" alt="logo"></a>
+                                    <a href="https://www.facebook.com/"><img src="{% static 'img/social-mediaLogo/facebook-circle-logo-24.png' %}" alt="logo"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 mt-4">
+                        <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="pic"><img src="{% static 'img/team/shashank.jpeg' %}" class="img-fluid" alt=""></div>
+                            <div class="member-info">
+                                <h4>Shashank Rai</h4>
+                                <span>Front-End Developer</span>
+                                <p>Collaborate with back-end developers and web designers to improve usability</p>
+                                <div class="social">
+                                    <a href="https://www.linkedin.com/in/shashank-r-856824174/"><img src="{% static 'img/social-mediaLogo/linkedin-square-logo-24.png' %}" alt="logo"></a>
+                                    <a href="https://www.instagram.com/shashankraiiii/"><img src="{% static 'img/social-mediaLogo/instagram-alt-logo-24.png' %}" alt="logo"></a>
+                                    <a href="https://www.facebook.com/shashank.rai.7792052/"><img src="{% static 'img/social-mediaLogo/facebook-circle-logo-24.png' %}" alt="logo"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-  
-              </div>
-  
+
             </div>
-          </div>
-  
-        </div>
-      </section><!-- End Skills Section -->
-  
- 
-      <!-- ======= Portfolio Section ======= -->
-      <section id="portfolio" class="portfolio">
-        <div class="container" data-aos="fade-up">
-  
-          <div class="section-title">
-            <h2>Cars Type</h2>
-            <p>Today, India’s car market offers a world of choice. Hatchbacks, sedans, SUVs, MUVs, coupes, convertibles, pickup trucks – you name it, we have it. But choosing the right car from so many shapes, sizes and designs, can be a tad bewildering.</p>
-          </div>
-  
-          <ul id="portfolio-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">Sedan</li>
-            <li data-filter=".filter-card">Hatchback</li>
-            <li data-filter=".filter-web">SUV</li>
-          </ul>
-  
-          <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-  
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-              <div class="portfolio-img"><img src= "{% static 'img/portfolio/sedan1.jpeg' %}" class="img-fluid" alt=""></div>
-              <div class="portfolio-info">
-                <h4>SEDAN</h4>
-                <a href= "{% static 'img/portfolio/sedan1.jpeg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-  
-            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-              <div class="portfolio-img"><img src= "{% static 'img/portfolio/SUV1.webp' %}" class="img-fluid" alt=""></div>
-              <div class="portfolio-info">
-                <h4>SUV</h4>
-                
-                <a href="{% static 'img/portfolio/SUV1.webp' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-  
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-              <div class="portfolio-img"><img src="{% static 'img/portfolio/sedan2.jpeg' %}" class="img-fluid" alt=""></div>
-              <div class="portfolio-info">
-                <h4>SEDAN</h4>
-                
-                <a href= "{% static 'img/portfolio/sedan2.jpeg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-  
-            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-              <div class="portfolio-img"><img src= "{% static 'img/portfolio/hatchback1.jpeg' %}" class="img-fluid" alt=""></div>
-              <div class="portfolio-info">
-                <h4>HATCHBACK</h4>
-               
-                <a href= "{% static 'img/portfolio/hatchback1.jpeg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-  
-            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-              <div class="portfolio-img"><img src= "{% static 'img/portfolio/SUV2.jpeg' %}" class="img-fluid" alt=""></div>
-              <div class="portfolio-info">
-                <h4>SUV</h4>
-                
-                <a href= "{% static 'img/portfolio/portfolio-5.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-  
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-              <div class="portfolio-img"><img src="{% static 'img/portfolio/sedan3.webp' %}" class="img-fluid" alt=""></div>
-              <div class="portfolio-info">
-                <h4>SEDAN</h4>
-                
-                <a href="{% static 'img/portfolio/sedan3.webp' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-  
-            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-              <div class="portfolio-img"><img src= "{% static 'img/portfolio/hatchback2.jpeg' %}" class="img-fluid" alt=""></div>
-              <div class="portfolio-info">
-                <h4>HATCHBACK</h4>
-                
-                <a href= "{% static 'img/portfolio/hatchback2.jpeg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-  
-            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-              <div class="portfolio-img"><img src= "{% static 'img/portfolio/hatchback3.avif' %}" class="img-fluid" alt=""></div>
-              <div class="portfolio-info">
-                <h4>HATCHBACK</h4>
-                
-                <a href=  "{% static 'img/portfolio/hatchback3.avif' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-  
-            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-              <div class="portfolio-img"><img src=  "{% static 'img/portfolio/SUV3.webp' %}" class="img-fluid" alt=""></div>
-              <div class="portfolio-info">
-                <h4>SUV</h4>
-                
-                <a href=  "{% static 'img/portfolio/SUV3.webp' %}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-  
-          </div>
-  
-        </div>
-      </section><!-- End Portfolio Section -->
-  
-      <!-- ======= Team Section ======= -->
-      <section id="team" class="team section-bg">
-        <div class="container" data-aos="fade-up">
-  
-          <div class="section-title">
-            <h2>Team</h2>
-            <p>“We are not a team because we work together. We are a team because we respect, trust and care for each other.”</p>
-          </div>
-  
-          <div class="row">
-  
-            <div class="col-lg-6">
-              <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
-                <div class="pic"><img src=  "{% static 'img/team/team-1.jpg' %}" class="img-fluid" alt=""></div>
-                <div class="member-info">
-                  <h4>Glen Gonsalves</h4>
-                  <span>Back-End Developer</span>
-                  <p>Knowledge and interest in computer systems and the latest technologies</p>
-                  <div class="social">
-                    <a href=""><i class="ri-twitter-fill"></i></a>
-                    <a href=""><i class="ri-facebook-fill"></i></a>
-                    <a href=""><i class="ri-instagram-fill"></i></a>
-                    <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                  </div>
+        </section>
+        <!-- End Team Section -->
+
+        <!-- ======= Frequently Asked Questions Section ======= -->
+        <section id="faq" class="faq section-bg">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>Frequently Asked Questions</h2>
+                    <p>If you require any reference for the questions to ask the seller when purchasing a used vehicle, then we have some of the FAQs listed below. Remember to ask the important questions to know about the car mileage, model, price, warranty,
+                        etc.
+                    </p>
                 </div>
-              </div>
-            </div>
-  
-            <div class="col-lg-6 mt-4 mt-lg-0">
-              <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="200">
-                <div class="pic"><img src=  "{% static 'img/team/team-2.jpg' %}" class="img-fluid" alt=""></div>
-                <div class="member-info">
-                  <h4>Ahmed Husain Maghrabi</h4>
-                  <span>Back-End Developer</span>
-                  <p>Attention to detail and desire to probe further into data</p>
-                  <div class="social">
-                    <a href=""><i class="ri-twitter-fill"></i></a>
-                    <a href=""><i class="ri-facebook-fill"></i></a>
-                    <a href=""><i class="ri-instagram-fill"></i></a>
-                    <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-  
-            <div class="col-lg-6 mt-4">
-              <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="300">
-                <div class="pic"><img src=  "{% static 'img/team/team-3.jpg' %}" class="img-fluid" alt=""></div>
-                <div class="member-info">
-                  <h4>Rejith Jacob</h4>
-                  <span>UI/UX Designer & Documentation</span>
-                  <p>Illustrate design ideas using storyboards, process flows and sitemaps</p>
-                  <div class="social">
-                    <a href=""><i class="ri-twitter-fill"></i></a>
-                    <a href=""><i class="ri-facebook-fill"></i></a>
-                    <a href=""><i class="ri-instagram-fill"></i></a>
-                    <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-  
-            <div class="col-lg-6 mt-4">
-              <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
-                <div class="pic"><img src= "{% static 'img/team/team-4.jpg' %}" class="img-fluid" alt=""></div>
-                <div class="member-info">
-                  <h4>Chrisanne Rebello</h4>
-                  <span>UI/UX Designer & Documentation</span>
-                  <p>Develop UI mockups and prototypes that clearly illustrate how sites function and look like</p>
-                  <div class="social">
-                    <a href=""><i class="ri-twitter-fill"></i></a>
-                    <a href=""><i class="ri-facebook-fill"></i></a>
-                    <a href=""><i class="ri-instagram-fill"></i></a>
-                    <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div class="col-lg-6 mt-4">
-              <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="300">
-                <div class="pic"><img src=  "{% static 'img/team/team-3.jpg' %}" class="img-fluid" alt=""></div>
-                <div class="member-info">
-                  <h4>Shashank Rai</h4>
-                  <span>Front-End Developer</span>
-                  <p>Collaborate with back-end developers and web designers to improve usability</p>
-                  <div class="social">
-                   
-                    <a href="https://www.facebook.com/shashank.rai.7792052/"><i class="ri-facebook-fill"></i></a>
-                    <a href="https://www.instagram.com/shashankraiiii/"><i class="ri-instagram-fill"></i></a>
-                    <a href="https://www.linkedin.com/in/shashank-r-856824174/"> <i class="ri-linkedin-box-fill"></i> </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-  
-        </div>
-      </section><!-- End Team Section -->
-  
-      <!-- ======= Frequently Asked Questions Section ======= -->
-      <section id="faq" class="faq section-bg">
-        <div class="container" data-aos="fade-up">
-  
-          <div class="section-title">
-            <h2>Frequently Asked Questions</h2>
-            <p>If you require any reference for the questions to ask the seller when purchasing a used vehicle, then we have some of the FAQs listed below. Remember to ask the important questions to know about the car mileage, model, price, warranty, etc.</p>
-          </div>
-  
-          <div class="faq-list">
-            <ul>
-              <li data-aos="fade-up" data-aos-delay="100">
-                <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">How old is the car?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
-                  <p>
-                    The very first question that you need to inquire is, “How old is the car?”. It is important because as per the year of manufacturing of the vehicle, you can calculate its depreciation rate and the ideal price you should pay for the car. 
+
+                <div class="faq-list">
+                    <ul>
+                        <li data-aos="fade-up" data-aos-delay="100">
+                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">How old is the car?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
+                                <p>
+                                    The very first question that you need to inquire is, “How old is the car?”. It is important because as per the year of manufacturing of the vehicle, you can calculate its depreciation rate and the ideal price you should pay for the car.
 
 
-                  </p>
+                                </p>
+                            </div>
+                        </li>
+
+                        <li data-aos="fade-up" data-aos-delay="200">
+                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">How much mileage has the car covered till now?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
+                                <p>
+                                    Something that every used car buying guide would recommend you to inquire about! We all know that car mileage is very important. You need to be aware of the exact miles the car has traversed till now. Even this helps in deciding the final price of the
+                                    vehicle in the end.</p>
+                            </div>
+                        </li>
+
+                        <li data-aos="fade-up" data-aos-delay="300">
+                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Is there an accident history? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
+                                <p>
+                                    You should definitely be aware of the car history and report if you are serious about buying it. It lets you assess your decision carefully during this time. Like, if you know that the car has faced a huge accident and was revamped all over again, it
+                                    makes no sense in buying such a vehicle. And if the accident was minor, you can bargain big-time.</p>
+                            </div>
+                        </li>
+
+                        <li data-aos="fade-up" data-aos-delay="400">
+                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">What are the financing options to buy the car?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
+                                <p>
+                                    Not all of you can afford to pay instant cash at the time of buying a second-hand vehicle. Some of you have to think a lot about a finance option like a loan. So, it is better to ask the seller in detail about the financing options available to buy the
+                                    car. Would they accept payments via other banks if they disburse a loan after processing? Or do they require a cheque or instant cash payment? Accordingly, you have to decide if you are ready to buy or not. </p>
+                            </div>
+                        </li>
+
+                        <li data-aos="fade-up" data-aos-delay="500">
+                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">Is the vehicle certified?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                            <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
+                                <p>
+                                    If you are purchasing the vehicle from a car dealer like Revv which provides subscriptions and car rentals and even sells used cars, then you have to enquire if the vehicle they are selling is certified or not. This inquiry is important because certified
+                                    used cars are highly recommended and the best options to consider when buying a second-hand vehicle.</p>
+                            </div>
+                        </li>
+
+                    </ul>
                 </div>
-              </li>
-  
-              <li data-aos="fade-up" data-aos-delay="200">
-                <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">How much mileage has the car covered till now?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
-                  <p>
-                    Something that every used car buying guide would recommend you to inquire about! We all know that car mileage is very important. You need to be aware of the exact miles the car has traversed till now. Even this helps in deciding the final price of the vehicle in the end.</p>
-                </div>
-              </li>
-  
-              <li data-aos="fade-up" data-aos-delay="300">
-                <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Is there an accident history? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
-                  <p>
-                    You should definitely be aware of the car history and report if you are serious about buying it. It lets you assess your decision carefully during this time. Like, if you know that the car has faced a huge accident and was revamped all over again, it makes no sense in buying such a vehicle. And if the accident was minor, you can bargain big-time.</p>
-                </div>
-              </li>
-  
-              <li data-aos="fade-up" data-aos-delay="400">
-                <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">What are the financing options to buy the car?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
-                  <p>
-                    Not all of you can afford to pay instant cash at the time of buying a second-hand vehicle. Some of you have to think a lot about a finance option like a loan.  So, it is better to ask the seller in detail about the financing options available to buy the car. Would they accept payments via other banks if they disburse a loan after processing? Or do they require a cheque or instant cash payment? Accordingly, you have to decide if you are ready to buy or not. </p>
-                </div>
-              </li>
-  
-              <li data-aos="fade-up" data-aos-delay="500">
-                <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">Is the vehicle certified?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
-                  <p>
-                    If you are purchasing the vehicle from a car dealer like Revv which provides subscriptions and car rentals and even sells used cars, then you have to enquire if the vehicle they are selling is certified or not. This inquiry is important because certified used cars are highly recommended and the best options to consider when buying a second-hand vehicle.</p>
-                </div>
-              </li>
-  
-            </ul>
-          </div>
-  
-        </div>
-      </section><!-- End Frequently Asked Questions Section -->
-  
-      <!-- ======= Contact Section ======= -->
-      <section id="contact" class="contact">
-        <div class="container" data-aos="fade-up">
-  
-          <div class="section-title">
-            <h2>Contact</h2>
-            <p>This is the website for Car Auctions of the bank designed and developed by students of St Francis Institute of Technology  from Third Year IT-A. Any feedback, related to content, design, or technology with respect to the Car Auction website may be submitted at Location, Email & Contact Number provided below.</p>
-          </div>
-  
-          <div align="center" class="align-items-stretch">
-  
-            <div class="col-lg-6 d-flex align-items-stretch">
-              <div class="info">
-                <div class="address">
-                  <i class="bi bi-geo-alt"></i>
-                  <h4>Location:</h4>
-                  <p>St. Francis Instutite of Technology, Borivali</p>
-                </div>
-  
-                <div class="email">
-                  <i class="bi bi-envelope"></i>
-                  <h4>Email:</h4>
-                  <p>carpoint@gmail.com</p>
-                </div>
-  
-                <div class="phone">
-                  <i class="bi bi-phone"></i>
-                  <h4>Call:</h4>
-                  <p>+919876543210</p>
-                </div>
-  
-                <iframe src="https://maps.google.com/maps?width=604&amp;height=440&amp;hl=en&amp;q=St francis Institute of Technolog&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
-              </div>
-  
+
             </div>
-  
-           
-          </div>
-  
-        </div>
-      </section><!-- End Contact Section -->
-  
-    </main><!-- End #main -->
-  
-    
-    <div id="preloader"></div>
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-  
+        </section>
+        <!-- End Frequently Asked Questions Section -->
+
+        <!-- ======= Contact Section ======= -->
+        <section id="contact" class="contact">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>Contact</h2>
+                    <p>This is the website for Car Auctions of the bank designed and developed by students of St Francis Institute of Technology from Third Year IT-A. Any feedback, related to content, design, or technology with respect to the Car Auction
+                        website may be submitted at Location, Email & Contact Number provided below.</p>
+                </div>
+
+                <div align="center" class="align-items-stretch">
+
+                    <div class="col-lg-6 d-flex align-items-stretch">
+                        <div class="info">
+                            <div class="address">
+                                <i class="bi bi-geo-alt"></i>
+                                <h4>Location:</h4>
+                                <p>St. Francis Instutite of Technology, Borivali</p>
+                            </div>
+
+                            <div class="email">
+                                <i class="bi bi-envelope"></i>
+                                <h4>Email:</h4>
+                                <p>carpoint@gmail.com</p>
+                            </div>
+
+                            <div class="phone">
+                                <i class="bi bi-phone"></i>
+                                <h4>Call:</h4>
+                                <p>+919876543210</p>
+                            </div>
+
+                            <iframe src="https://maps.google.com/maps?width=604&amp;height=440&amp;hl=en&amp;q=St francis Institute of Technolog&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+        </section>
+        <!-- End Contact Section -->
+
+    </main>
+    <!-- End #main -->
+
+
+
+
     <!-- Vendor JS Files -->
-    <script src= "{% static 'vendor/aos/aos.js' %}"></script>
-    <script src= "{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-    <script src= "{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
-    <script src= "{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
-    <script src= "{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
-    <script src= "{% static 'vendor/waypoints/noframework.waypoints.js' %}"></script>
-    <script src= "{% static 'vendor/php-email-form/validate.js' %}"></script>
-  
+    <script src="{% static 'vendor/aos/aos.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+    <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'vendor/waypoints/noframework.waypoints.js' %}"></script>
+    <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+
     <!-- Template Main JS File -->
-    <script src= "{% static 'js/main.js' %}"></script>
-  
+    <script src="{% static 'js/main.js' %}"></script>
+
 </body>
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-  
-      
-  
+<!-- ======= Footer ======= -->
+<footer id="footer">
+
+
+
     <div class="footer-top">
-      <div class="container">
-        <div class="row">
+        <div class="container">
+            <div class="row">
 
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>CarPoint</h3>
-            <p>
-              St. Francis Instutite of Technology,<br>
-              Borivali,<br>
-              Mumbai <br><br>
-              <strong>Phone:</strong> +919876543210<br>
-              <strong>Email:</strong> carpoint@gmail.com<br>
-            </p>
-          </div>
+                <div class="col-lg-3 col-md-6 footer-contact">
+                    <h3>CarPoint</h3>
+                    <p>
+                        St. Francis Instutite of Technology,<br> Borivali,
+                        <br> Mumbai <br><br>
+                        <strong>Phone:</strong> +919876543210<br>
+                        <strong>Email:</strong> carpoint@gmail.com<br>
+                    </p>
+                </div>
 
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="{% url 'auctions:template' %}">Home</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Active Listings</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Categories</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Login</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Register</a></li>
+                    </ul>
+                </div>
 
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul>
-          </div>
 
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Social Networks</h4>
-            <p>Feel free to contact us</p>
-            <div class="social-links mt-3">
-              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+
+                <div align="right" class="col-lg-3 col-md-6 footer-links">
+                    <h4> Our Social Networks</h4>
+                    <p>Feel free to contact us</p>
+                    <div class="social-links mt-3">
+                        <a href="https://www.linkedin.com/in/shashank-r-856824174/"><img src="{% static 'img/social-mediaLogo/linkedin-square-logo-24.png' %}" alt="logo"></a>
+                        <a href="https://www.instagram.com/shashankraiiii/"><img src="{% static 'img/social-mediaLogo/instagram-alt-logo-24.png' %}" alt="logo"></a>
+                        <a href="https://www.facebook.com/shashank.rai.7792052/"><img src="{% static 'img/social-mediaLogo/facebook-circle-logo-24.png' %}" alt="logo"></a>
+                    </div>
+                </div>
+
             </div>
-          </div>
-
         </div>
-      </div>
     </div>
 
-    <div class="container footer-bottom clearfix">
-      <div class="copyright">
+
+    <div class="copyright">
         <strong><span></span></strong>
-      </div>
-      <div class="credits">
-       <a href="https://bootstrapmade.com/"></a>
-      </div>
     </div>
-  </footer><!-- End Footer -->
+    <div class="credits">
+        <a href="https://bootstrapmade.com/"></a>
+    </div>
+
+</footer>
+<!-- End Footer -->
 
 {% endblock %}
-
-
