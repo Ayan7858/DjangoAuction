@@ -1,6 +1,6 @@
 {% extends "auctions/layout.html" %} {% block title %} Success {% endblock %} {% block body %}
 
-<div align="left" class="card border-success success inline" style="height: 375px; width: 700px">
+<div align="left" class="card border-success success-card inline" style="height: 375px; width: 700px; margin-left: 100px; margin-right: 50px;">
     <h4 class="card-header border-success bg-light">Success {{ request.user }}!</h4>
     <div class="card-body">
         <img src="{{ listing.image.url }}" alt="{{ listing.name }}" height="200" />
@@ -12,61 +12,54 @@
 </div>
 
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-</head>
-
-<body>
-
-    <div class="container" style="width: 500px;">
-        <div class="row">
+<div class="container inline" style="width: 500px; margin-top: 35px;">
+    <div class="row">
 
 
-            <div class="col-lg inline">
-                <br>
-                <div class="card card-body">
-                    <h3>{{list.listing.name}}</h3>
-                    <hr>
-                    <h4>Total: <strong style="color: var(--warning)">₹{{ bid.highest_bid }}</strong></h4>
-                    <hr>
+        <div class="col-lg">
+            <br>
+            <div class="card card-body">
+                <h3>{{list.listing.name}}</h3>
+                <hr>
+                <h4>Total: <strong>₹{{ bid.highest_bid }}</strong></h4>
+                <hr>
 
-                    <div id="paypal-button-container"></div>
+                <div id="paypal-button-container"></div>
 
-                </div>
             </div>
         </div>
     </div>
+</div>
 
-    <script src="https://www.paypal.com/sdk/js?client-id=AWq0JPv65rXltOCdfueJGzBoWgQqtsL6ifyNS7GY_Noflg0jAHNSyp2Uu_UGXXp9nBPp5V78WyaHWrOH&currency=USD"></script>
+<script src="https://www.paypal.com/sdk/js?client-id=AWq0JPv65rXltOCdfueJGzBoWgQqtsL6ifyNS7GY_Noflg0jAHNSyp2Uu_UGXXp9nBPp5V78WyaHWrOH&currency=USD"></script>
 
-    <script>
-        // Render the PayPal button into #paypal-button-container
-        paypal.Buttons({
+<script>
+    // Render the PayPal button into #paypal-button-container
+    paypal.Buttons({
 
-            // Set up the transaction
-            createOrder: function(data, actions) {
-                return actions.order.create({
-                    purchase_units: [{
-                        amount: {
-                            value: '{{ bid.highest_bid }}'
-                        }
+        // Set up the transaction
+        createOrder: function(data, actions) {
+            return actions.order.create({
+                purchase_units: [{
+                    amount: {
+                        value: '{{ bid.highest_bid }}'
+                    }
 
-                    }]
-                });
-            },
+                }]
+            });
+        },
 
-            // Finalize the transaction
-            onApprove: function(data, actions) {
-                return actions.order.capture().then(function(details) {
-                    // Show a success message to the buyer
-                    completeOrder()
-                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
-                });
-            }
+        // Finalize the transaction
+        onApprove: function(data, actions) {
+            return actions.order.capture().then(function(details) {
+                // Show a success message to the buyer
+                completeOrder()
+                alert('Transaction completed by ' + details.payer.name.given_name + '!');
+            });
+        }
 
 
-        }).render('#paypal-button-container');
-    </script>
-</body>
+    }).render('#paypal-button-container');
+</script>
+
 {% endblock %}

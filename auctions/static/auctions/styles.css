@@ -275,12 +275,19 @@ nav .nav {
 }
 
 .success-card {
-    width: 60%;
-    margin: auto auto;
-    margin-top: 15%;
+    width: 600px;
+    margin-right: 50%;
+    margin-top: 3%;
     text-align: center;
     color: var(--success);
     box-shadow: 0 2px 15px 2px rgba(0, 0, 0, 0.2);
+}
+
+.inline {
+    border: 1px solid red;
+    margin: 10px;
+    float: left;
+    margin: 10px;
 }
 
 
