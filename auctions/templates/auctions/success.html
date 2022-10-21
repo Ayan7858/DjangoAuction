@@ -1,24 +1,72 @@
+{% extends "auctions/layout.html" %} {% block title %} Success {% endblock %} {% block body %}
 
-{% extends "auctions/layout.html" %}
+<div align="left" class="card border-success success inline" style="height: 375px; width: 700px">
+    <h4 class="card-header border-success bg-light">Success {{ request.user }}!</h4>
+    <div class="card-body">
+        <img src="{{ listing.image.url }}" alt="{{ listing.name }}" height="200" />
+        <br> You have successfully won the bid for: <strong style="color: var(--gray)">{{ listing.name }}</strong>
+        <br> For the price of: <strong style="color: var(--warning)">₹{{ bid.highest_bid }}</strong>
+        <br>
 
-{% block title %}
-Success
-{% endblock %}
-
-{% block body %}
-
-<div class="card border-success success-card">
-  <h4 class="card-header border-success bg-light">Success {{ request.user }}!</h4>
-  <div class="card-body">
-    <img src="{{ listing.image.url }}" alt="{{ listing.name }}" height="200" />
-    <br>
-    You have successfully won the bid for: <strong style="color: var(--gray)">{{ listing.name }}</strong>
-    <br>
-    For the price of: <strong style="color: var(--warning)">₹{{ bid.highest_bid }}</strong>
-    <br>
-    <br>
-    <button class="btn btn-primary">Send Email
-  </div>
+    </div>
 </div>
 
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+
+    <div class="container" style="width: 500px;">
+        <div class="row">
+
+
+            <div class="col-lg inline">
+                <br>
+                <div class="card card-body">
+                    <h3>{{list.listing.name}}</h3>
+                    <hr>
+                    <h4>Total: <strong style="color: var(--warning)">₹{{ bid.highest_bid }}</strong></h4>
+                    <hr>
+
+                    <div id="paypal-button-container"></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.paypal.com/sdk/js?client-id=AWq0JPv65rXltOCdfueJGzBoWgQqtsL6ifyNS7GY_Noflg0jAHNSyp2Uu_UGXXp9nBPp5V78WyaHWrOH&currency=USD"></script>
+
+    <script>
+        // Render the PayPal button into #paypal-button-container
+        paypal.Buttons({
+
+            // Set up the transaction
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: '{{ bid.highest_bid }}'
+                        }
+
+                    }]
+                });
+            },
+
+            // Finalize the transaction
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    // Show a success message to the buyer
+                    completeOrder()
+                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                });
+            }
+
+
+        }).render('#paypal-button-container');
+    </script>
+</body>
 {% endblock %}
