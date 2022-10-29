@@ -1,1 +1,1 @@
-web: gunicorn djangoauction.wsgi --log-file=-
+web: gunicorn minicarpoint.wsgi --log-file=-
