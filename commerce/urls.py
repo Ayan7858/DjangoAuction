@@ -24,7 +24,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.views.generic import TemplateView
 
 from django.views.static import serve
-from django.conf.urls import url
+from django.urls import re_path
 
 
 
