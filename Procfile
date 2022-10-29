@@ -1,2 +1,2 @@
 python manage.py migrate
-web: gunicorn minicarpoint.wsgi
+web: gunicorn commerce.wsgi
