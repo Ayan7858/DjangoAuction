@@ -25,13 +25,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '6ps8j!crjgrxt34cqbqn7x&b3y%(fny8k8nh21+qa)%ws3fh!q'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-<<<<<<< HEAD
-ALLOWED_HOSTS = ['*']
-=======
-ALLOWED_HOSTS = ['minicarpoint.herokuapp.com']
->>>>>>> bdc14f3c8b3681f986e5fcd3fbcf05387b4d9dbe
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -48,6 +44,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -132,3 +129,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'auctions/uploads', 'auctions/static')
 MEDIA_URL = '/uploads/'
 
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'carpoint26@gmail.com'
+EMAIL_HOST_PASSWORD = 'miniproject'
+EMAIL_USE_TLS = True
