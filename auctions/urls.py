@@ -20,4 +20,5 @@ urlpatterns = [
     path("user_listings", views.user_listings, name="user_listings"),
     path("close_listing/<int:listing_id>", views.close_listing, name="close_listing"),
     path("template", views.template, name="template"),
+    path('order-complete/', views.order_complete, name="order_complete")
 ]

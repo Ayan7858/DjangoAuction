@@ -285,3 +285,8 @@ def close_listing(request, listing_id):
     else:
         messages.warning(request, 'Unable to close listing! Authentication error.', fail_silently=True)
     return redirect("auctions:user_listings")
+
+
+def order_complete(request):
+    messages.success(request, "Your order was successful!")
+    return render(request, 'auctions/complete.html') # you can pass any context as needed
