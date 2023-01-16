@@ -6,14 +6,6 @@
   - `Pillow`
 - `Browser` (Preferably `Chrome`)
 
-### Setup
-- Clone the repo using `git clone https://github.com/Aadhieaswar/auction-web-app.git`
-- Using a Python virtual environment recommended
-- If you have `Python` installed but not `Django` or `Pillow`:
-  - run `pip3 install django pillow`
-- To run the website in a development server:
-  - `cd` into the repo and run `python3 manage.py runserver`
-
 ### Additional Setup
 - To create a super user for the website simply run:
   - `python3 manage.py createsuperuser`
@@ -41,26 +33,4 @@
   - `urls.py`: the main urls file with the urls from all the apps in the web application (such as auctions)
 - The `images` directory holds many pictures that show you the look of the website
 
-### Features of the Website
-##### Create a new listing
-  ![create-listing](./images/create-listing.gif)
-  <br>
-Here, there was listing named **Nice Mug** created with initial bid of **$10**
-  <hr>
 
-##### Bid on listings
-  ![bid on listing](./images/bid-on-listing.gif)
-  <br>
-Here, there was a bid of **$30** put on the **Cactus Decoration** which had an initial bid of **$20**
-  <hr>
-
-##### Responsive
-  ![responsiveness](./images/responsive.gif)
-  <br>
-Here, multiple pages of the auction website are shown in the __IphoneX__ screen view
-  <hr>
-
-### Credits
-- Harvard CS50 for this idea of a wonderful project.
-- Implemented by __Aadhieaswar Senthil Kumar__
-  - Contact me at: <aadhieaswar@gmail.com>
